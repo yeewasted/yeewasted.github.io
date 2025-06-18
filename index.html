@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Синергия - Подача документов</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Стили для видео-фона */
+        .video-background {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            padding: 30px;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF416C, #FF4B2B);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 20px 50px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            background: linear-gradient(45deg, #FF4B2B, #FF416C);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Ваше локальное видео -->
+    <video autoplay muted loop class="video-background">
+        <source src="your-video.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+
+    <div class="container">
+        <h1 class="title">Хочешь учиться в лучшем университете мира?</h1>
+        <button class="btn" id="submitBtn">Подай документы в Синергию</button>
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            // Эффект при нажатии
+            this.style.transform = 'scale(0.95)';
+            
+            // Задержка перед переходом
+            setTimeout(() => {
+                window.location.href = 'https://защитник.рф';
+            }, 300);
+        });
+    </script>
+</body>
+</html>
